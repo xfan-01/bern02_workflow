@@ -1,2 +1,76 @@
-# bern02_workflow
+# Malaria Gene Annotation Workflow
+
 This is an assignment for the Exercise: Workflows and FAIR principles in BERN02.
+
+**Goal:** Merge BLASTX protein descriptions into FASTA headers for malaria gene sequences and produce a curated FASTA-like output.
+**Keywords:** malaria, bioinformatics, BLASTX, FASTA, reproducibility, FAIR, workflow
+
+## Quickstart
+
+```bash
+mamba env create -f environment.yml   # or: conda env create -f environment.yml
+conda activate malaria-workflow
+jupyter lab  # or jupyter notebook
+```
+or
+
+Open the notebook and run the first cell to:
+```python
+!pip install -r requirements.txt
+```
+
+Then run cells in order.
+
+## Command-line execution
+```
+python src/malaria.py data/malaria.fna data/malaria.blastx.tab output.txt
+```
+
+This will write `output.txt` containing FASTA headers with an added `protein=<description>` field for entries that have BLASTX hits.
+
+## Assumptions
+- FASTA header fields are **tab-delimited**, with the first token being the gene ID (e.g., `1_g`).
+- BLASTX table is **tab-delimited**; column 1 is gene ID and column 10 is protein description.
+- Entries with `null` in the description are **excluded** from the output.
+
+## A tiny worked example
+For gene *g* with length \( L \), the script appends the **protein description** \( d \) when available:
+\[
+\text{header}' = \text{header} \; \Vert \; \text{\texttt{\t}} \; \texttt{protein=} d
+\]
+If \( d = \text{null} \) the entry is skipped.
+
+---
+
+## Dependency versions
+
+**Python 3.11.9** — stable baseline.
+
+**matplotlib 3.9.2, biopython 1.83, nbformat 5.10.4*** — fixed to keep plotting, bioinformatics functions, and notebooks consistent.
+
+---
+
+## FAIR Principles (in brief)
+
+- **Findable:**
+  - Rich metadata in this README; add keywords in the repository topics (e.g., `bioinformatics`, `malaria`, `BLAST`, `FASTA`).
+  - Use a clear naming scheme (`data/`, `src/`, `notebooks/`).
+
+- **Accessible:**
+  - Public repository (e.g., GitHub/GitLab) with an open-source license (MIT included).
+  - Data files are plain text and easily downloadable.
+
+- **Interoperable:**
+  - Standard formats: FASTA and TSV.
+  - Code is Python 3; environment is portable via `conda` and `pip`.
+
+- **Reusable:**
+  - Explicit license.
+  - Complete example and step-by-step notebook.
+  - Version pins and environment files for reproducibility.
+
+---
+
+## Notes on quality control
+- Headers remain tab-delimited.
+- Sequences are assumed to be single-line (per the original assignment). If multi-line FASTA is needed, see the notebook section “Robust headers and multiline FASTA”.
