@@ -24,4 +24,4 @@ This is an assignment for the Exercise: Workflows and FAIR principles in BERN02.
 
 ## Notes on quality control
 - Headers remain tab-delimited.
-- Sequences are assumed to be single-line (per the original assignment). If multi-line FASTA is needed, see the notebook section “Robust headers and multiline FASTA”.
+- Sequences are assumed to be single-line (per the original assignment). If multi-line FASTA is needed, see the notebook section “Notes on robustness”.
