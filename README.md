@@ -50,27 +50,6 @@ If \( d = \text{null} \) the entry is skipped.
 
 ---
 
-## FAIR Principles
-
-- **Findable:**
-  - Rich metadata in this README; add keywords in the repository topics (e.g., `bioinformatics`, `malaria`, `BLAST`, `FASTA`).
-  - Use a clear naming scheme (`data/`, `src/`, `notebooks/`).
-
-- **Accessible:**
-  - Public repository (e.g., GitHub/GitLab) with an open-source license (MIT included).
-  - Data files are plain text and easily downloadable.
-
-- **Interoperable:**
-  - Standard formats: FASTA and TSV.
-  - Code is Python 3; environment is portable via `conda` and `pip`.
-
-- **Reusable:**
-  - Explicit license.
-  - Complete example and step-by-step notebook.
-  - Version pins and environment files for reproducibility.
-
----
-
 ## Notes on quality control
 - Headers remain tab-delimited.
 - Sequences are assumed to be single-line (per the original assignment). If multi-line FASTA is needed, see the notebook section “Robust headers and multiline FASTA”.
