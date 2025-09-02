@@ -3,6 +3,7 @@
 This is an assignment for the Exercise: Workflows and FAIR principles in BERN02.
 
 **Goal:** Merge BLASTX protein descriptions into FASTA headers for malaria gene sequences and produce a curated FASTA-like output.
+
 **Keywords:** malaria, bioinformatics, BLASTX, FASTA, reproducibility, FAIR, workflow
 
 ## Quickstart
