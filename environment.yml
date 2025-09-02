@@ -2,7 +2,7 @@ name: malaria-workflow
 channels:
   - conda-forge
 dependencies:
-  - python=3.11.9
+  - python=3.12
   - pip=24.2
   - pip:
       - matplotlib==3.9.2
