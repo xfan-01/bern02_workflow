@@ -50,7 +50,7 @@ If \( d = \text{null} \) the entry is skipped.
 
 ---
 
-## FAIR Principles (in brief)
+## FAIR Principles
 
 - **Findable:**
   - Rich metadata in this README; add keywords in the repository topics (e.g., `bioinformatics`, `malaria`, `BLAST`, `FASTA`).
