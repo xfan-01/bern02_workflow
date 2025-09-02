@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "Malaria Gene Annotation Workflow"
+message: "If you use this workflow, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Fan
+    given-names: Xing
+repository-code: https://example.org/your-repo-url
+keywords:
+  - malaria
+  - bioinformatics
+  - reproducibility
+  - FAIR
+license: MIT
+version: "1.0.0"
