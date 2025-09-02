@@ -35,11 +35,14 @@ This will write `output.txt` containing FASTA headers with an added `protein=<de
 - Entries with `null` in the description are **excluded** from the output.
 
 ## A tiny worked example
-For gene \( g \) with length \( L \), when a description \( d \) exists:
-\[
-\text{header}'=\text{header}\,\|\,\mathtt{\backslash t}\,\mathtt{protein=}\,d
-\]
-If \( d = \text{null} \), the entry is skipped.
+For gene $g$ with length $L$, when a description $d$ exists:
+
+$$
+\text{header}'=\text{header}\,\Vert\,\mathtt{\backslash t}\,\mathtt{protein=}\,d
+$$
+
+If $d = \text{null}$, the entry is skipped.
+
 
 
 ---
